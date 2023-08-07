@@ -1,10 +1,11 @@
 wifi_sensor.pyz: wifi_sensor
-	# python -m zipapp $< -m "wifi_sensor:syncmain"
+	# create an executable zipapp (still relies on system python though)
 	python -m zipapp -p "/usr/bin/env python3" $< -m "wifi_sensor:syncmain"
 
 deps:
+	# install requirements inside the deploy folder. run this before wifi_sensor.pyz please
 	python -m pip install -r requirements.txt --target wifi_sensor
 
 scp: wifi_sensor.pyz
-	# todo: not sure the +x bit transfers
+	# scp pyz zipapp bundle to device
 	scp -o PubkeyAuthentication=no $< pi@aw-pi-modreg.local:
