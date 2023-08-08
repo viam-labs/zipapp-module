@@ -3,7 +3,7 @@ on:
 
 jobs:
   publish:
-    runs-on: ubuntu
+    runs-on: ubuntu-latest
     steps:
     - name: upload
       uses: viamrobotics/upload-module@main
