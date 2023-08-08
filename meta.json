@@ -1,0 +1,13 @@
+{
+  "name": "zipapp-upload-test",
+  "visibility": "private",
+  "url": "https://github.com/viam-labs/zipapp-module",
+  "description": "sample module to test upload-module action + zipapp bundling",
+  "models": [
+    {
+      "api": "rdk:component:sensor",
+      "model": "acme:wifi_sensor:linux"
+    }
+  ],
+  "entrypoint": "./wifi_sensor.pyz"
+}

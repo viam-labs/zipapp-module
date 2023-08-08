@@ -5,5 +5,11 @@ jobs:
   publish:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+    - name: build
+      run: make module.tar.gz
     - name: upload
       uses: viamrobotics/upload-module@main
+      with:
+        module-path: module.tar.gz
