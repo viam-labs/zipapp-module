@@ -1,0 +1,9 @@
+on:
+  push:
+
+jobs:
+  publish:
+    runs-on: ubuntu
+    steps:
+    - name: upload
+      uses: viamrobotics/upload-module
