@@ -13,3 +13,6 @@ jobs:
       uses: viamrobotics/upload-module@main
       with:
         module-path: module.tar.gz
+        org-id: e76d1b3b-0468-4efd-bb7f-fb1d2b352fcb
+        platform: linux/amd64
+        cli-config-secret: ${{ secrets.cli_config }}
