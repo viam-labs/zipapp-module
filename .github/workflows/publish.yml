@@ -1,0 +1,19 @@
+on:
+  push:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+    - name: build
+      run: make module.tar.gz
+    - name: upload
+      uses: viamrobotics/upload-module@main
+      with:
+        module-path: module.tar.gz
+        org-id: e76d1b3b-0468-4efd-bb7f-fb1d2b352fcb
+        platform: linux/amd64
+        version: 0.0.0
+        cli-config-secret: ${{ secrets.cli_config }}

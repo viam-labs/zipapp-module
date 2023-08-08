@@ -1,2 +1,3 @@
 *.pyz
 wifi_sensor/*/
+*.tar.gz
