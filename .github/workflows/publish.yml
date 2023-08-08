@@ -6,4 +6,4 @@ jobs:
     runs-on: ubuntu
     steps:
     - name: upload
-      uses: viamrobotics/upload-module
+      uses: viamrobotics/upload-module@main
