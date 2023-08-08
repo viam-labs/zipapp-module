@@ -1,5 +1,8 @@
 # wifi_sensor
 
+> [!NOTE]
+> This is in viamrobotics org because it needs to access the private [upload-module](https://github.com/viamrobotics/upload-module) action
+
 Example using built-in python [zipapp](https://docs.python.org/3.11/library/zipapp.html) to deploy module to pi.
 
 This follows the [sensor example](https://python.viam.dev/examples/example.html#create-custom-modules) on python.viam.dev.
