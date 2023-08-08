@@ -1,7 +1,9 @@
-# wifi_sensor
+[![.github/workflows/publish.yml](https://github.com/viamrobotics/zipapp-module/actions/workflows/publish.yml/badge.svg)](https://github.com/viamrobotics/zipapp-module/actions/workflows/publish.yml)
 
 > [!NOTE]
 > This is in viamrobotics org because it needs to access the private [upload-module](https://github.com/viamrobotics/upload-module) action
+
+# wifi_sensor
 
 Example using built-in python [zipapp](https://docs.python.org/3.11/library/zipapp.html) to deploy module to pi.
 
