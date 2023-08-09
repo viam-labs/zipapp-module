@@ -16,6 +16,7 @@ jobs:
         name: module
         path: module.tar.gz
   publish:
+    needs: [build]
     runs-on: ubuntu-latest
     if: ${{ github.event_name == 'release' }}
     steps:
