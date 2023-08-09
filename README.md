@@ -3,6 +3,9 @@
 > [!NOTE]
 > This is in viamrobotics org because it needs to access the private [upload-module](https://github.com/viamrobotics/upload-module) action
 
+> [!WARNING]
+> This pattern may not work fcor your project -- zipapp can't bundle C extension modules
+
 # wifi_sensor
 
 Example using built-in python [zipapp](https://docs.python.org/3.11/library/zipapp.html) to deploy module to pi.
