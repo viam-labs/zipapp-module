@@ -13,13 +13,15 @@ jobs:
       run: make module.tar.gz
     - uses: actions/upload-artifact@v3
       with:
+        name: module
         path: module.tar.gz
   publish:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/download-artifact@v3
       with:
-        name: module.tar.gz
+        name: module
+    - run: find
     - name: upload
       uses: viamrobotics/upload-module@main
       with:

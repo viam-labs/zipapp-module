@@ -4,7 +4,7 @@
 > This is in viamrobotics org because it needs to access the private [upload-module](https://github.com/viamrobotics/upload-module) action
 
 > [!WARNING]
-> This pattern may not work fcor your project -- zipapp can't bundle C extension modules
+> This pattern may not work for your project -- zipapp can't bundle C extension modules
 
 # wifi_sensor
 
