@@ -13,7 +13,7 @@ from viam.module.module import Module
 from viam.resource.registry import Registry, ResourceCreatorRegistration
 
 class MySensor(Sensor):
-    MODEL = Model(ModelFamily("acme","wifi_sensor"), "linux")
+    MODEL = Model(ModelFamily("viam","wifi_sensor"), "linux")
 
     @classmethod
     def new(cls, config: ComponentConfig, dependencies: Mapping[ResourceName, ResourceBase]):

@@ -6,7 +6,7 @@
   "models": [
     {
       "api": "rdk:component:sensor",
-      "model": "acme:wifi_sensor:linux"
+      "model": "viam:wifi_sensor:linux"
     }
   ],
   "entrypoint": "./wifi_sensor.pyz"
