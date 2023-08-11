@@ -4,31 +4,19 @@ on:
     types: [published]
 
 jobs:
-  build:
+  publish:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - uses: actions/setup-python@v4
     - name: build
       run: make module.tar.gz
-    - uses: actions/upload-artifact@v3
-      with:
-        name: module
-        path: module.tar.gz
-  publish:
-    needs: [build]
-    runs-on: ubuntu-latest
-    if: ${{ github.event_name == 'release' }}
-    steps:
     - uses: actions/checkout@v3 # for meta.json
-    - uses: actions/download-artifact@v3
-      with:
-        name: module
     - name: upload
       uses: viamrobotics/upload-module@main
       with:
         module-path: module.tar.gz
         org-id: e76d1b3b-0468-4efd-bb7f-fb1d2b352fcb
         platform: linux/amd64
-        version: ${{ github.ref_name }}
+        version: ${{ github.event_name == 'release' && github.ref_name || join(['0.0.0', github.ref_name, github.run_number], '-') }}
         cli-config-secret: ${{ secrets.cli_config }}
