@@ -14,4 +14,4 @@ scp: wifi_sensor.pyz
 
 module.tar.gz: wifi_sensor.pyz
 	rm -f $@
-	tar cf $@ $<
+	tar czf $@ $<
