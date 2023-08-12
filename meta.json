@@ -9,5 +9,5 @@
       "model": "viam:wifi_sensor:linux"
     }
   ],
-  "entrypoint": "./wifi_sensor.pyz"
+  "entrypoint": "wifi_sensor.pyz"
 }
