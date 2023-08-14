@@ -17,5 +17,5 @@ jobs:
         module-path: module.tar.gz
         org-id: e76d1b3b-0468-4efd-bb7f-fb1d2b352fcb
         platform: linux/amd64
-        version: ${{ github.event_name == 'release' && github.ref_name || format('0.0.0-{0}-{1}', github.ref_name, github.run_number) }}
+        version: ${{ github.event_name == 'release' && github.ref_name || format('0.0.0-{0}.{1}', github.ref_name, github.run_number) }}
         cli-config-secret: ${{ secrets.cli_config }}
