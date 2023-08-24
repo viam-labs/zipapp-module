@@ -20,19 +20,8 @@ Assuming you have a pi set up with viam-server, run these commands on your lapto
 	- sudo is necessary because it needs to be available for our server process, not just for your user account
 	- installing the SDK separately is necessary because zipapp can't bundle C extensions
 1. Go to config/modules for your robot in app.viam.com, and add the new module (executable path is `/home/pi/wifi_sensor.pyz`)
-1. Look for issues in the webapp logs
-1. Go to config, switch from 'builder' to 'raw json', and add this object to the `components` array:
-    ```json
-	{
-		"name": "my-sensor",
-		"type": "sensor",
-		"model": "viam:wifi_sensor:linux",
-		"attributes": {},
-		"depends_on": []
-	}
-    ```
-	If you run into trouble, also check out the config docs [here](https://python.viam.dev/examples/example.html#configure-a-modular-resource)
-1. Use the config [below](#config).
+1. Go to config, switch from 'builder' to 'raw json', and use the config [below](#config). If you run into trouble, also check out the config docs [here](https://python.viam.dev/examples/example.html#configure-a-modular-resource)
+1. Look for issues in the Logs tabs for your robot on app.viam.com
 1. Go to the control page
 	- find 'my-sensor' under sensors
 	- hit 'get readings'
