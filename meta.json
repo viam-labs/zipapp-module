@@ -1,6 +1,6 @@
 {
-  "name": "zipapp-upload-test",
-  "visibility": "private",
+  "name": "viam:zipapp-upload-test",
+  "visibility": "public",
   "url": "https://github.com/viam-labs/zipapp-module",
   "description": "sample module to test upload-module action + zipapp bundling",
   "models": [
