@@ -1,2 +1,3 @@
 # not needed but we're testing dep bundling
 more-itertools
+viam-sdk==0.79.1
