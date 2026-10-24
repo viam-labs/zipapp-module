@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 import asyncio
 from typing import Any, Dict, Mapping, Optional
-import more_itertools  # to test module bundling
 
+import more_itertools  # noqa: F401 -- unused; exercises dependency bundling in the zipapp
 from viam.components.sensor import Sensor
-from viam.operations import run_with_operation
+from viam.module.module import Module
 from viam.proto.app.robot import ComponentConfig
 from viam.proto.common import ResourceName
 from viam.resource.base import ResourceBase
-from viam.resource.types import Model, ModelFamily
-from viam.module.module import Module
 from viam.resource.registry import Registry, ResourceCreatorRegistration
+from viam.resource.types import Model, ModelFamily
 
 
 class MySensor(Sensor):
